@@ -1,15 +1,32 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <HelloWorld v-bind:msg="type"/>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import axios from 'axios';
 
 export default {
   name: 'App',
+  data() {
+    return {
+      type : null,
+      baseURL : "http://35.232.166.121:3000/all"
+    }
+  },
   components: {
     HelloWorld
+  },
+  methods: {
+    fetchWishlist : function() {
+      axios.get(this.baseURL)
+        .then(data => this.type = data.data)
+        .catch(err => console.log(err));
+    }
+  }, 
+  mounted() {
+    this.fetchWishlist();
   }
 }
 </script>
