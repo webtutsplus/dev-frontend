@@ -1,7 +1,8 @@
 <template>
-  <div class="hello">
+  <div>
     <h1>Heading</h1>
-    <p> {{msg}} </p>
+    <!-- <p> {{msg}} </p> -->
+  <div v-html="msg"></div>
   </div>
 </template>
 

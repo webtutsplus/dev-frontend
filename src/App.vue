@@ -1,6 +1,10 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld v-bind:msg="type"/>
+  <div v-for="weatherData in type" :key="weatherData.id">
+      <HelloWorld v-bind:msg="weatherData.processed_html"/>
+  </div>
+  
+  
 </template>
 
 <script>
