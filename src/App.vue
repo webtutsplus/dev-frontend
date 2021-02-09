@@ -1,5 +1,4 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
   <div v-for="weatherData in type" :key="weatherData.id">
       <HelloWorld v-bind:msg="weatherData.processed_html"/>
   </div>
@@ -16,7 +15,7 @@ export default {
   data() {
     return {
       type : null,
-      baseURL : "http://35.232.166.121:3000/all"
+      baseURL : "http://104.197.181.100:3000/all"
     }
   },
   components: {
