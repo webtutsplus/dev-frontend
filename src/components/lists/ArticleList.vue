@@ -1,0 +1,41 @@
+<template>
+  <div v-for="article in articles" :key="article.id">
+    <ArticleCard v-bind:title="article.title" v-bind:description="article.description" v-bind:tags="article.tag_list"/>
+  </div>
+
+</template>
+
+<script>
+import axios from 'axios';
+import ArticleCard from '/src/components/cards/ArticleCard.vue';
+
+
+export default {
+  name: "ArticleLists",
+  data() {
+    return {
+      articles : null
+    }
+  },
+  components: {
+    ArticleCard
+  },
+  props:[
+      'apiUrl'
+  ],
+  methods: {
+    fetchArticleList : function() {
+      axios.get(this.apiUrl)
+        .then(data => this.articles = data.data)
+        .catch(err => console.log(err));
+    }
+  },
+  mounted() {
+    this.fetchArticleList();
+  }
+}
+</script>
+
+<style scoped>
+
+</style>
