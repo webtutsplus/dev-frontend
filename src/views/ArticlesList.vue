@@ -15,7 +15,7 @@ import {API_BASE_URL} from '/src/config.js';
 import ArticleCard from '/src/components/cards/ArticleCard.vue';
 
 export default {
-    name: 'App',
+    name: 'ArticlesList',
     data() {
     return {
       baseURL: API_BASE_URL
