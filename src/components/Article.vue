@@ -1,6 +1,6 @@
 <template>
+<!-- For displaying single article -->
   <div class="crayons-article__main">
-    <!-- <p> {{msg}} </p> -->
     <div v-html="msg" class="crayons-article__body text-styles spec__body" data-article-id="1" id="article-body"></div>
   </div>
 </template>
