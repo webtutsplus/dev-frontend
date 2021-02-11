@@ -1,10 +1,11 @@
 <template>
-    <p>{{baseURL}}</p>
+    <ArticleCard title="Java" description="Begin coding"/>
 </template>
 
 <script>
-import axios from 'axios'
-import {API_BASE_URL} from '/src/config.js'
+import axios from 'axios';
+import {API_BASE_URL} from '/src/config.js';
+import ArticleCard from '/src/components/cards/ArticleCard.vue';
 
 export default {
     name: 'App',
@@ -14,6 +15,7 @@ export default {
     }
   },
   components: {
+      ArticleCard
   },
   methods: {
     fetchWishlist : function() {
