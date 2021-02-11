@@ -15,7 +15,7 @@ export default {
   data() {
     return {
       type : null,
-      baseURL : "http://104.197.181.100:3000/all"
+      baseURL : "http://localhost:3000/all"
     }
   },
   components: {
