@@ -1,4 +1,4 @@
-runtime: nodejs10
+runtime: nodejs14
 handlers:
 - url: /(.*\..+)$
   static_files: dist/\1
