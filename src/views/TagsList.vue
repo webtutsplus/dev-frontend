@@ -22,7 +22,7 @@ export default {
   },
   methods: {
     fetchTaglist : function() {
-      axios.get(this.baseURL+'/tags')
+      axios.get(this.baseURL+'tags/')
         .then(data => this.tags = data.data)
         .catch(err => console.log(err));
     }
