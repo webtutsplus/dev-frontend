@@ -10,7 +10,7 @@ export default {
     name: 'ArticlesList',
     data() {
     return {
-      baseURL: API_BASE_URL+'/all'
+      baseURL: API_BASE_URL+'articles/'
     }
   },
   components: {
