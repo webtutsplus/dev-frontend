@@ -13,11 +13,10 @@
 </template>
 
 <script>
-  /* eslint-disable */
+
 import axios from 'axios';
 import {API_BASE_URL} from '/src/config.js';
 import postscribe from 'postscribe';
-
 
 export default {
   name: 'Article',
