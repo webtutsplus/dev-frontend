@@ -10,10 +10,10 @@ import {API_BASE_URL} from '/src/config.js';
 import TagCard from '/src/components/cards/TagCard.vue';
 
 export default {
-    name: 'TagsList',
-    data() {
+  name: 'TagsList',
+  data() {
     return {
-      tags : null,  
+      tags : null,
       baseURL: API_BASE_URL
     }
   },

@@ -9,7 +9,7 @@
     <div class="card-body">
       <h5 class="card-title">{{title}}</h5>
       <p class="card-text">{{description}}</p>
-      <a href="#" class="btn btn-primary disabled">View Article</a>
+      <a v-bind:href="'/articles/'+id" class="btn btn-primary">View Article</a>
     </div>
   </div>
 </template>
@@ -20,7 +20,8 @@ export default {
   props: [
     'title',
     'description',
-    'tags'
+    'tags',
+    'id'
   ]
 }
 </script>
