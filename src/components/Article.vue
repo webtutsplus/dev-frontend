@@ -1,3 +1,4 @@
+
 <template>
 <!-- For displaying single article -->
   <div class="container">
@@ -12,8 +13,11 @@
 </template>
 
 <script>
+  /* eslint-disable */
 import axios from 'axios';
 import {API_BASE_URL} from '/src/config.js';
+import postscribe from 'postscribe';
+
 
 export default {
   name: 'Article',
@@ -30,8 +34,16 @@ export default {
           .then(response => {
             this.content = response.data.processed_html;
             this.title = response.data.title;
-          })
-          .catch(err => console.log(err));
+          }).then(()=>{
+            let arr = document.getElementsByClassName('ltag_gist-liquid-tag')
+            for (let i = 0; i < arr.length; i++){
+              postscribe(arr[i], arr[i].innerHTML, {
+                done: function() {
+                  console.info('Dblclick script has been delivered.');
+                }
+              });
+            }
+          }).catch(err => console.log(err));
     }
   },
   mounted() {
