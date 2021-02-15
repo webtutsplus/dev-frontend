@@ -1,6 +1,6 @@
 <template>
   <div v-for="article in articles" :key="article.id">
-    <ArticleCard v-bind:title="article.title" v-bind:description="article.description" v-bind:tags="article.tag_list"/>
+    <ArticleCard v-bind:id="article.id" v-bind:title="article.title" v-bind:description="article.description" v-bind:tags="article.tag_list"/>
   </div>
 
 </template>

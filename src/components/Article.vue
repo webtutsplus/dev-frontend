@@ -1,16 +1,45 @@
 <template>
 <!-- For displaying single article -->
-  <div class="crayons-article__main">
-    <div v-html="msg" class="crayons-article__body text-styles spec__body" data-article-id="1" id="article-body"></div>
+  <div class="container">
+    <div class="crayons-article__header__meta">
+      <h1 class="fs-3xl s:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-4 medium" v-html="title"></h1>
+    </div>
+
+    <div class="crayons-article__main">
+      <div v-html="content" class="crayons-article__body text-styles spec__body" data-article-id="1" id="article-body"></div>
+    </div>
   </div>
 </template>
 
 <script>
+import axios from 'axios';
+import {API_BASE_URL} from '/src/config.js';
+
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
+  name: 'Article',
+  data() {
+    return {
+      content : null,
+      title : null,
+      baseURL: API_BASE_URL
+    }
+  },
+  methods: {
+    fetchArticle : function() {
+      axios.get(this.baseURL+'articles/'+this.$route.params.id)
+          .then(response => {
+            this.content = response.data.processed_html;
+            this.title = response.data.title;
+          })
+          .catch(err => console.log(err));
+    }
+  },
+  mounted() {
+    this.fetchArticle();
+    console.log(this.$route.params.id)
+    console.log(this.content)
   }
+
 }
 </script>
 
