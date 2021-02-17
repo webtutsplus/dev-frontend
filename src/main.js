@@ -8,6 +8,11 @@ import AllArticlesView from './views/AllArticlesView.vue';
 import TagsList from './views/TagsList.vue';
 import TagArticlesView from "@/views/TagArticlesView";
 import Article from "@/components/Article";
+import HomePageView from "@/views/HomePageView";
+import FrontEndHomePage from "@/views/FrontendHomePage";
+import BackendHomePage from "@/views/BackendHomePage";
+import DevopsHomePage from "@/views/DevopsHomePage";
+import AlgorithmsHomePage from "@/views/AlgorithmsHomePage";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -15,7 +20,12 @@ const router = createRouter({
         { path: '/articles', component: AllArticlesView},
         { path: '/tags', component: TagsList},
         { path: '/tags/:tag', component: TagArticlesView},
-        { path: '/articles/:id', component: Article}
+        { path: '/articles/:id', component: Article},
+        { path: '/', component: HomePageView},
+        { path: '/frontend', component: FrontEndHomePage},
+        { path: '/backend', component: BackendHomePage},
+        { path: '/devops', component: DevopsHomePage},
+        { path: '/algorithms', component: AlgorithmsHomePage}
     ]
 });
 
