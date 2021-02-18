@@ -10,14 +10,30 @@
       </div>
     </div>
     <!--Title Row Ends-->
+
+    <!--Article List-->
+    <ArticleList v-bind:api-url="baseURL"/>
+
   </div>
+  <!--  Main Container Ends  -->
 
 
 </template>
 
 <script>
+import {API_BASE_URL} from '/src/config.js';
+import ArticleList from '/src/components/lists/ArticleList.vue'
+
 export default {
-  name: "AlgorithmsHomePage"
+  name: "AlgorithmsHomePage",
+  data() {
+    return {
+      baseURL :  API_BASE_URL+'/tags/algorithms',
+    }
+  },
+  components : {
+    ArticleList
+  }
 }
 </script>
 
