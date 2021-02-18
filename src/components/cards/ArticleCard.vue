@@ -10,7 +10,7 @@
     <div class="card-body">
       <h5 class="card-title">{{title}}</h5>
       <p class="card-text">{{description}}</p>
-      <a v-bind:href="'/articles/'+id" class="btn btn-primary">View Article</a>
+      <router-link v-bind:to="'/articles/'+id" class="btn btn-primary">View Article</router-link>
     </div>
   </div>
 

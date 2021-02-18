@@ -2,7 +2,7 @@
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">{{tag}}</h5>
-            <a v-bind:href="'/tags/'+tag" class="card-link">View Articles</a>
+            <router-link v-bind:to="'/tags/'+tag" class="card-link">View Articles</router-link>
         </div>
     </div>
 </template>
