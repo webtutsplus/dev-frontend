@@ -1,6 +1,6 @@
 <template>
   <!--  Main Container-->
-  <div class="main-background">
+  <div class="main-background container-fluid">
 
     <!--Title Row-->
     <div class="row">
