@@ -1,6 +1,6 @@
 <template>
   <!--  Main Container-->
-  <div class="main-background">
+  <div class="main-background container-fluid">
 
     <!--Title Row-->
     <div class="row">
@@ -16,7 +16,7 @@
       <!-- Text Div Starts -->
       <div class="col-6 text-center">
         <div class="pt-2 pt-md-4 pl-md-4">
-          <h4 class="card-heading"><a href="/frontend">Learn Frontend</a></h4>
+          <h4> <router-link to="/frontend" class="card-heading">Learn Frontend</router-link></h4>
           <p class="card-content pl-md-4 text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque commodi deserunt distinctio
             doloremque doloribus eaque et hic maiores molestias nihil, quam quis saepe! Doloremque fuga quisquam repellat
             vitae voluptatum?</p>
@@ -43,7 +43,7 @@
       <!-- Text Div Starts -->
       <div class="col-6 text-center">
         <div class="pt-2 pt-md-4 pr-md-4">
-          <h4 class="card-heading"><a href="/backend">Learn Backend</a></h4>
+          <h4><router-link class="card-heading" to="/backend">Learn Backend</router-link></h4>
           <p class="card-content pr-md-4 text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque commodi deserunt distinctio
             doloremque doloribus eaque et hic maiores molestias nihil, quam quis saepe! Doloremque fuga quisquam repellat
             vitae voluptatum?</p>
@@ -60,7 +60,7 @@
       <!-- Text Div Starts -->
       <div class="col-6 text-center">
         <div class="pt-2 pt-md-4 pl-md-4">
-          <h4 class="card-heading"><a href="/algorithms">Learn Algorithms</a></h4>
+          <h4><router-link class="card-heading" to="/algorithms">Learn Algorithms</router-link></h4>
           <p class="card-content pl-md-4 text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque commodi deserunt distinctio
             doloremque doloribus eaque et hic maiores molestias nihil, quam quis saepe! Doloremque fuga quisquam repellat
             vitae voluptatum?</p>
@@ -87,7 +87,7 @@
       <!-- Text Div Starts -->
       <div class="col-6 text-center">
         <div class="pt-2 pt-md-4 pr-md-4">
-          <h4 class="card-heading"><a href="/devops">Learn Devops</a></h4>
+          <h4><router-link class="card-heading" to="/devops">Learn Devops</router-link></h4>
           <p class="card-content pr-md-4 text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque commodi deserunt distinctio
             doloremque doloribus eaque et hic maiores molestias nihil, quam quis saepe! Doloremque fuga quisquam repellat
             vitae voluptatum?</p>
@@ -135,10 +135,6 @@ name: "HomePageView"
 
 .card-content {
   color: #ffffff;
-}
-
-a {
-  text-decoration: none;
 }
 
 

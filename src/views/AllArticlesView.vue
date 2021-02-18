@@ -1,5 +1,7 @@
 <template>
+  <div class="main-background container">
     <ArticleList v-bind:api-url="baseURL"/>
+  </div>
 </template>
 
 <script>

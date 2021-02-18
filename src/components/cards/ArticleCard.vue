@@ -1,28 +1,55 @@
 <template>
-  <div class="card">
+  <!--Article Card-->
+  <div class="card mb-3">
+
+    <!--Tags-->
     <div class="card-header">
       <span v-for="tag in tags" :key="tag">
         {{tag+' '}}
       </span>
+    </div>
+    <!--Tags Ends-->
 
+    <!--Body-->
+    <div class="row pt-2">
+      <!--Text-->
+      <div class="col-md-6">
+        <div class="card-body-left">
+          <h5 class="card-title">{{title}}</h5>
+          <p class="card-text">{{description}}</p>
+          <router-link v-bind:to="'/articles/'+id" class="btn btn-primary">View Article</router-link>
+        </div>
+      </div>
+      <!--Text Ends-->
+      <!--Image-->
+      <div class="col-md-6 pt-1">
+        <img class="card-img-top" v-bind:src="baseUrl+coverImage" alt="Card image cap">
+      </div>
+      <!--Image Ends-->
     </div>
-    <div class="card-body">
-      <h5 class="card-title">{{title}}</h5>
-      <p class="card-text">{{description}}</p>
-      <a v-bind:href="'/articles/'+id" class="btn btn-primary">View Article</a>
-    </div>
+    <!--Body Ends-->
+
   </div>
+  <!--Article Card Ends-->
+
 </template>
 
 <script>
+import {API_BASE_URL} from '/src/config.js';
 export default {
   name: 'ArticleCard',
   props: [
     'title',
     'description',
     'tags',
-    'id'
-  ]
+    'id',
+    'coverImage'
+  ],
+  data() {
+    return {
+      baseUrl : API_BASE_URL
+    }
+  }
 }
 </script>
 
