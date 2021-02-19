@@ -17,7 +17,7 @@
         <div class="card-body-left">
           <h5 class="card-title">{{title}}</h5>
           <p class="card-text">{{description}}</p>
-          <router-link v-bind:to="'/articles/'+id" class="btn btn-primary">View Article</router-link>
+          <router-link v-bind:to="'/articles/'+slug" class="btn btn-primary">View Article</router-link>
         </div>
       </div>
       <!--Text Ends-->
@@ -43,7 +43,8 @@ export default {
     'description',
     'tags',
     'id',
-    'coverImage'
+    'coverImage',
+    'slug'
   ],
   data() {
     return {
