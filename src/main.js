@@ -20,7 +20,7 @@ const router = createRouter({
         { path: '/articles', component: AllArticlesView},
         { path: '/tags', component: TagsList},
         { path: '/tags/:tag', component: TagArticlesView},
-        { path: '/articles/:id', component: Article},
+        { path: '/articles/:slug', component: Article},
         { path: '/', component: HomePageView},
         { path: '/frontend', component: FrontEndHomePage},
         { path: '/backend', component: BackendHomePage},
