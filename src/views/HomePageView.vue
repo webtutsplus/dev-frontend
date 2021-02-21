@@ -5,8 +5,7 @@
     <!--Title Row-->
     <div class="row">
       <div class="col-12 pb-5 pt-5">
-        <h1 class="text-center main-heading">Simple Coding</h1>
-        <h4 class="text-center main-subheading">Learn Algorithms, Web and Mobile Devlopment</h4>
+        <img src="/assets/homepage.png" class="img-fluid">
       </div>
     </div>
     <!--Title Row Ends-->
@@ -25,7 +24,7 @@
       <!-- Text Div Ends -->
       <!-- Image Div Starts -->
       <div class="col-6 text-center">
-        <i class="bi bi-credit-card-2-front" style="font-size: 9rem"></i>
+        <img src="/assets/front-end.png" style="width: 80%" class="img-fluid">
       </div>
       <!-- Image Div Ends -->
     </div>
@@ -37,7 +36,7 @@
     <div class="row card-even-background p-5">
       <!-- Image Div Starts -->
       <div class="col-6 text-center">
-        <i class="bi bi-credit-card-2-front" style="font-size: 9rem"></i>
+        <img src="/assets/back-end.png" style="width: 80%" class="img-fluid">
       </div>
       <!-- Image Div Ends -->
       <!-- Text Div Starts -->
@@ -69,7 +68,7 @@
       <!-- Text Div Ends -->
       <!-- Image Div Starts -->
       <div class="col-6 text-center">
-        <i class="bi bi-credit-card-2-front" style="font-size: 9rem"></i>
+        <img src="/assets/back-end.png" style="width: 80%" class="img-fluid">
       </div>
       <!-- Image Div Ends -->
     </div>
@@ -81,7 +80,7 @@
     <div class="row card-even-background p-5">
       <!-- Image Div Starts -->
       <div class="col-6 text-center">
-        <i class="bi bi-credit-card-2-front" style="font-size: 9rem"></i>
+        <img src="/assets/back-end.png" style="width: 80%" class="img-fluid">
       </div>
       <!-- Image Div Ends -->
       <!-- Text Div Starts -->
@@ -103,6 +102,8 @@
 </template>
 
 <script>
+
+// import image from './ass'
 export default {
 name: "HomePageView"
 }
@@ -110,7 +111,7 @@ name: "HomePageView"
 
 <style>
 .main-background, body {
-  background-color: #1b3c65
+  background-color: #fff
 }
 
 .main-heading {
