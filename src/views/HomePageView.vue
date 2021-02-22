@@ -68,7 +68,7 @@
       <!-- Text Div Ends -->
       <!-- Image Div Starts -->
       <div class="col-6 text-center">
-        <img src="/assets/back-end.png" style="width: 80%" class="img-fluid">
+        <img src="/assets/algorithm.gif" style="width: 80%" class="img-fluid">
       </div>
       <!-- Image Div Ends -->
     </div>
@@ -80,7 +80,7 @@
     <div class="row card-even-background p-5">
       <!-- Image Div Starts -->
       <div class="col-6 text-center">
-        <img src="/assets/back-end.png" style="width: 80%" class="img-fluid">
+        <img src="/assets/devops.gif" style="width: 80%" class="img-fluid">
       </div>
       <!-- Image Div Ends -->
       <!-- Text Div Starts -->
