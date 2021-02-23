@@ -5,7 +5,7 @@
     <!--Title Row-->
     <div class="row">
       <div class="col-12 pb-5 pt-5">
-        <img src="/assets/homepage.png" class="img-fluid">
+        <img src="/assets/homepage.gif" class="img-fluid">
       </div>
     </div>
     <!--Title Row Ends-->
@@ -16,9 +16,7 @@
       <div class="col-6 text-center">
         <div class="pt-2 pt-md-4 pl-md-4">
           <h4> <router-link to="/frontend" class="card-heading">Learn Frontend</router-link></h4>
-          <p class="card-content pl-md-4 text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque commodi deserunt distinctio
-            doloremque doloribus eaque et hic maiores molestias nihil, quam quis saepe! Doloremque fuga quisquam repellat
-            vitae voluptatum?</p>
+          <p class="card-content pl-md-4 text-left">Do you want to build websites with an amazing user interface? Do you want to have good projects on your resume? We will deep dive into the world of Frontend Development. We will teach you HTML, CSS, JavaScript and Vue.js. We will walk you through complete projects.</p>
         </div>
       </div>
       <!-- Text Div Ends -->
@@ -43,9 +41,7 @@
       <div class="col-6 text-center">
         <div class="pt-2 pt-md-4 pr-md-4">
           <h4><router-link class="card-heading" to="/backend">Learn Backend</router-link></h4>
-          <p class="card-content pr-md-4 text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque commodi deserunt distinctio
-            doloremque doloribus eaque et hic maiores molestias nihil, quam quis saepe! Doloremque fuga quisquam repellat
-            vitae voluptatum?</p>
+          <p class="card-content pr-md-4 text-left">Ever wondered how Facebook works? With a single click, we get all our required information. Here, we will teach you Backend Development with Java Springboot and develop complete projects</p>
         </div>
       </div>
       <!-- Text Div Ends -->
@@ -60,9 +56,7 @@
       <div class="col-6 text-center">
         <div class="pt-2 pt-md-4 pl-md-4">
           <h4><router-link class="card-heading" to="/algorithms">Learn Algorithms</router-link></h4>
-          <p class="card-content pl-md-4 text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque commodi deserunt distinctio
-            doloremque doloribus eaque et hic maiores molestias nihil, quam quis saepe! Doloremque fuga quisquam repellat
-            vitae voluptatum?</p>
+          <p class="card-content pl-md-4 text-left">Algorithms are the solution to all Interview problems. If you want to improve your coding skills and crack your dream job, this is the place to go. We will guide you through the process of solving problems in a technical interview. We will solve Leetcode problems live, give you a platform to run your code and many more.</p>
         </div>
       </div>
       <!-- Text Div Ends -->
@@ -87,15 +81,13 @@
       <div class="col-6 text-center">
         <div class="pt-2 pt-md-4 pr-md-4">
           <h4><router-link class="card-heading" to="/devops">Learn Devops</router-link></h4>
-          <p class="card-content pr-md-4 text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque commodi deserunt distinctio
-            doloremque doloribus eaque et hic maiores molestias nihil, quam quis saepe! Doloremque fuga quisquam repellat
-            vitae voluptatum?</p>
+          <p class="card-content pr-md-4 text-left">Wondered how to make development and deployment faster? Learn DevOps from us to build, test and release your software faster. We will go through Google Cloud Platform, Kubernetes, Docker etc.
+          </p>
         </div>
       </div>
       <!-- Text Div Ends -->
     </div>
     <!-- Learn DevOps Div Ends -->
-
 
   </div>
   <!--  Main Container Ends-->
