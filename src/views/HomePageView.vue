@@ -89,7 +89,6 @@
     </div>
     <!-- Learn DevOps Div Ends -->
 
-
   </div>
   <!--  Main Container Ends-->
 </template>
