@@ -5,7 +5,11 @@
     <div class="crayons-article__header__meta">
       <h1 class="fs-3xl s:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-4 medium" v-html="title"></h1>
     </div>
-
+    <div class="crayons-article__header__meta">
+      <span v-for="tag in tags" :key="tag">
+        #{{tag+' '}}
+      </span>
+    </div>
     <div class="crayons-article__main">
       <div v-html="content" class="crayons-article__body text-styles spec__body" data-article-id="1" id="article-body"></div>
     </div>
@@ -29,6 +33,7 @@ export default {
     return {
       content : null,
       title : null,
+      tags : [],
       baseURL: API_BASE_URL
     }
   },
@@ -38,6 +43,7 @@ export default {
           .then(response => {
             this.content = response.data.processed_html;
             this.title = response.data.title;
+            this.tags = response.data.tag_list;
           }).then(()=>{
             let arr = document.getElementsByClassName('ltag_gist-liquid-tag')
             for (let i = 0; i < arr.length; i++){
