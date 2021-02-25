@@ -13,6 +13,7 @@ import FrontEndHomePage from "@/views/FrontendHomePage";
 import BackendHomePage from "@/views/BackendHomePage";
 import DevopsHomePage from "@/views/DevopsHomePage";
 import AlgorithmsHomePage from "@/views/AlgorithmsHomePage";
+import SignUp from "@/views/SignUp";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -25,7 +26,8 @@ const router = createRouter({
         { path: '/frontend', component: FrontEndHomePage},
         { path: '/backend', component: BackendHomePage},
         { path: '/devops', component: DevopsHomePage},
-        { path: '/algorithms', component: AlgorithmsHomePage}
+        { path: '/algorithms', component: AlgorithmsHomePage},
+        { path: '/signup', component: SignUp}
     ]
 });
 
