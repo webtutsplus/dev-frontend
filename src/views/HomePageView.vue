@@ -21,9 +21,9 @@
       </div>
       <!-- Text Div Ends -->
       <!-- Image Div Starts -->
-      <div class="col-6 text-center">
-        <img src="/assets/front-end.png" style="width: 80%" class="img-fluid">
-      </div>
+
+        <img src="/assets/front-end.png" class="col-6 text-center img-fluid">
+
       <!-- Image Div Ends -->
     </div>
     <!-- Learn FrontEnd Div Ends -->
