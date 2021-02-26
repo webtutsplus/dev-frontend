@@ -39,7 +39,8 @@ export default {
   },
   methods: {
     fetchArticle : function() {
-      axios.get(this.baseURL+'articles/slugs/'+this.$route.params.slug)
+      const url = `${this.baseURL}articles/slugs/${this.$route.params.slug}`
+      axios.get(url)
           .then(response => {
             this.content = response.data.processed_html;
             this.title = response.data.title;
