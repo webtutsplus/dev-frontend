@@ -73,7 +73,7 @@ export default {
         alert("You have successfully signed up.")
         window.location.replace("/login");
       })
-      .catch(function (error) {
+      .catch(error => {
         if (error.response) {
           alert("Errors in the form. Please fix the errors");
           let text = "";
