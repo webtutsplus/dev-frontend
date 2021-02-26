@@ -48,6 +48,7 @@
 <script>
 import {API_BASE_URL} from "@/config";
 import axios from "axios";
+import $ from 'jquery'
 
 export default {
   name: "SignUp",
@@ -61,7 +62,8 @@ export default {
       // Prevent Default Action of Submit Button
       e.preventDefault();
       const url = `${this.baseURL}simplecodingapi/signup`;
-      document.getElementById("alert").style.display = 'none';
+      $('#alert').hide();
+
       //Get the FormData
       let formData = new FormData(document.getElementById("signup_form"));
 
@@ -78,8 +80,8 @@ export default {
           error.response.data.errors.forEach(function (item) {
             text+="<li>"+item+"</li>";
           })
-          document.getElementById("alert").innerHTML=text;
-          document.getElementById("alert").style.display="block";
+          $('#alert').html(text);
+          $('#alert').show();
         }
       });
     }
