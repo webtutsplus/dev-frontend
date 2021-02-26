@@ -60,12 +60,13 @@ export default {
     submitForm: function (e) {
       // Prevent Default Action of Submit Button
       e.preventDefault();
+      const url = `${this.baseURL}simplecodingapi/signup`;
       document.getElementById("alert").style.display = 'none';
       //Get the FormData
       let formData = new FormData(document.getElementById("signup_form"));
 
       //Post the Form Data
-      axios.post(this.baseURL+'simplecodingapi/signup',formData)
+      axios.post(url,formData)
       .then(function () {
         alert("You have successfully signed up.")
         window.location.replace("/login");
