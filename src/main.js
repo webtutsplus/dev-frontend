@@ -14,6 +14,9 @@ import BackendHomePage from "@/views/BackendHomePage";
 import DevopsHomePage from "@/views/DevopsHomePage";
 import AlgorithmsHomePage from "@/views/AlgorithmsHomePage";
 import SignUp from "@/views/SignUp";
+import ChromeExtensionPage from "@/views/ChromeExtensionPage";
+import OpenSourcePage from "@/views/OpenSourcePage";
+import ExploreCoursesPage from "@/views/ExploreCoursesPage";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -27,7 +30,10 @@ const router = createRouter({
         { path: '/backend', component: BackendHomePage},
         { path: '/devops', component: DevopsHomePage},
         { path: '/algorithms', component: AlgorithmsHomePage},
-        { path: '/signup', component: SignUp}
+        { path: '/signup', component: SignUp},
+        { path: '/chrome-extension', component: ChromeExtensionPage},
+        { path: '/opensource' , component: OpenSourcePage},
+        { path: '/explore-courses', component: ExploreCoursesPage}
     ]
 });
 

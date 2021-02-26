@@ -5,7 +5,7 @@
     <!--Tags-->
     <div class="card-header">
       <span v-for="tag in tags" :key="tag">
-        {{tag+' '}}
+        #{{tag+' '}}
       </span>
     </div>
     <!--Tags Ends-->
