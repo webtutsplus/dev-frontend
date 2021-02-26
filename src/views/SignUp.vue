@@ -68,6 +68,7 @@ export default {
       axios.post(this.baseURL+'simplecodingapi/signup',formData)
       .then(function () {
         alert("You have successfully signed up.")
+        window.location.replace("/login");
       })
       .catch(function (error) {
         if (error.response) {
@@ -78,7 +79,6 @@ export default {
           })
           document.getElementById("alert").innerHTML=text;
           document.getElementById("alert").style.display="block";
-
         }
       });
     }
