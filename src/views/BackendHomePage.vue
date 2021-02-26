@@ -12,7 +12,7 @@
     <!--Title Row Ends-->
     <div class="row">
       <!-- Image Div Starts -->
-      <div style=" margin-left: auto; margin-right: auto;" class="col-6 text-center">
+      <div style=" margin-left: auto; margin-right: auto;" class="col-12 text-center">
         <img src="/assets/back-end.png" style="max-width: 100%; height: auto;" class="img-fluid mx-auto d-block" alt="front-end technologies">
       </div>
       <!-- Image Div Ends -->
