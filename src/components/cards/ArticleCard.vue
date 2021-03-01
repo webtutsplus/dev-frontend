@@ -5,7 +5,7 @@
     <!--Tags-->
     <div class="card-header">
       <span v-for="tag in tags" :key="tag">
-        #{{tag+' '}}
+        <router-link :to="'/tags/'+tag">#{{tag+' '}}</router-link>
       </span>
     </div>
     <!--Tags Ends-->

@@ -2,7 +2,7 @@
   <!-- Display component here as per the url -->
   <Navbar></Navbar>
   <div>
-    <router-view></router-view>
+    <router-view :key="$route.fullPath"></router-view>
   </div>  
   
 </template>
