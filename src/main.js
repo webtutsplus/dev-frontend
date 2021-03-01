@@ -17,6 +17,7 @@ import SignUp from "@/views/SignUp";
 import ChromeExtensionPage from "@/views/ChromeExtensionPage";
 import OpenSourcePage from "@/views/OpenSourcePage";
 import ExploreCoursesPage from "@/views/ExploreCoursesPage";
+import SignIn from "@/views/SignIn";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -33,7 +34,8 @@ const router = createRouter({
         { path: '/signup', component: SignUp},
         { path: '/chrome-extension', component: ChromeExtensionPage},
         { path: '/opensource' , component: OpenSourcePage},
-        { path: '/explore-courses', component: ExploreCoursesPage}
+        { path: '/explore-courses', component: ExploreCoursesPage},
+        { path: '/signin', component: SignIn}
     ]
 });
 
