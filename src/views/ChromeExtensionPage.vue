@@ -11,7 +11,7 @@
     </div>
     <div class="row">
       <!-- Image Div Starts -->
-      <div style=" margin-left: auto; margin-right: auto;" class="col-6 text-center">
+      <div style=" margin-left: auto; margin-right: auto;" class="col-12 text-center">
         <img src="/assets/front-end.png" style="max-width: 80%;" class="img-fluid mx-auto d-block"
              alt="front-end technologies">
       </div>
@@ -30,7 +30,7 @@
 <script>
 import {API_BASE_URL} from '/src/config.js';
 import ArticleList from "@/components/lists/ArticleList";
-
+document.title = "Chrome Extension"
 export default {
   name: "ChromeExtensionPage",
   data() {

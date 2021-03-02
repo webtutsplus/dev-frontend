@@ -7,7 +7,7 @@
 <script>
 import {API_BASE_URL} from '/src/config.js';
 import ArticleList from '/src/components/lists/ArticleList.vue';
-
+document.title = "Articles"
 export default {
     name: 'ArticlesList',
     data() {

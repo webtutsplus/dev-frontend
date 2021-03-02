@@ -5,7 +5,9 @@
     <!--Tags-->
     <div class="card-header">
       <span v-for="tag in tags" :key="tag">
-        <router-link :to="'/tags/'+tag">#{{tag+' '}}</router-link>
+        <RouterLink v-bind:to="`/tags/${tag}`">#{{tag+' '}}</RouterLink>
+<!--        <router-view :key="$route.fullPath"></router-view>-->
+<!--        <a v-bind:href="'/tags/'+tag">#{{tag+' '}}</a>-->
       </span>
     </div>
     <!--Tags Ends-->
@@ -38,6 +40,7 @@
 import {API_BASE_URL} from '/src/config.js';
 export default {
   name: 'ArticleCard',
+
   props: [
     'title',
     'description',
@@ -50,7 +53,9 @@ export default {
     return {
       baseUrl : API_BASE_URL
     }
-  }
+  },
+  
+
 }
 </script>
 

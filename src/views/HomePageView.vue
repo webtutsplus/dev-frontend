@@ -122,18 +122,18 @@
       </div>
       <!-- Text Div Ends -->
       <!-- Image Div Starts -->
-
-      <img src="" style="width: 80%" class="col-md-6 text-center img-fluid" alt="chrome-extension">
-
+      <div class="col-md-6 text-center">
+      <img src="/assets/front-end.png" style="width: 80%" class="img-fluid" alt="chrome-extension">
+      </div>
       <!-- Image Div Ends -->
     </div>
 
     <br>
     <div class="row card-even-background p-5">
       <!-- Image Div Starts -->
-
-      <img src="" style="width: 80%" class="col-md-6 text-center img-fluid" alt="open-source">
-
+      <div class="col-md-6 text-center">
+      <img src="/assets/front-end.png" style="width: 80%" class="img-fluid" alt="open-source">
+      </div>
       <!-- Image Div Ends -->
       <!-- Text Div Starts -->
       <div class="col-md-6 text-center">
@@ -165,20 +165,42 @@
       </div>
       <!-- Text Div Ends -->
       <!-- Image Div Starts -->
-
-      <img src="" style="width: 80%" class="col-md-6 text-center img-fluid" alt="courses">
-
+      <div class="col-md-6 text-center">
+      <img src="/assets/front-end.png" style="width: 80%" class="img-fluid" alt="courses">
+      </div>
       <!-- Image Div Ends -->
     </div>
+    <br>
+    <div class="row card-even-background p-5">
+      <!-- Image Div Starts -->
+      <div class="col-md-6 text-center">
+      <img src="/assets/android.png" style="width: 80%" class="img-fluid" alt="Android">
+      </div>
+      <!-- Image Div Ends -->
+      <!-- Text Div Starts -->
+      <div class="col-md-6 text-center">
+        <div class="pt-2 pt-md-4 pl-md-4">
+          <h4>
+            <router-link to="/android" class="card-heading">Learn Android</router-link>
+          </h4>
+          <p class="card-content pl-md-4 text-left">Do you want to build websites with an amazing user interface? Do you
+            want to have good projects on your resume? We will deep dive into the world of Frontend Development. We will
+            teach you HTML, CSS, JavaScript and Vue.js. We will walk you through complete projects.</p>
+        </div>
+      </div>
+      <!-- Text Div Ends -->
+      <br>
+    </div>
+
 
   </div>
   <!--  Main Container Ends-->
 </template>
 
 <script>
-
 // import image from './ass'
 export default {
+  title: "Home",
   name: "HomePageView"
 }
 </script>

@@ -11,6 +11,7 @@ import axios from 'axios';
 import ArticleCard from '/src/components/cards/ArticleCard.vue';
 
 
+
 export default {
   name: "ArticleLists",
   data() {
@@ -24,6 +25,13 @@ export default {
   props: [
     'apiUrl'
   ],
+  // watch: {
+  //   $route(to,from) {
+  //       if (to !== from) {
+  //         this.fetchArticleList();
+  //       }
+  //   }
+  // },
   methods: {
     fetchArticleList: function () {
       axios.get(this.apiUrl)
