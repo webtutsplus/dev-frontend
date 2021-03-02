@@ -49,7 +49,7 @@
 import {API_BASE_URL} from "@/config";
 import axios from "axios";
 import $ from 'jquery'
-
+document.title = "Signup"
 export default {
   name: "SignUp",
   data() {

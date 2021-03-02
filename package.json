@@ -15,7 +15,7 @@
     "jquery": "^3.5.1",
     "postscribe": "^2.0.8",
     "vue": "^3.0.0",
-    "vue-router": "^4.0.3"
+    "vue-router": "^4.0.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

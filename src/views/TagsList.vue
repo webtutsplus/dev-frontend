@@ -8,7 +8,7 @@
 import axios from 'axios';
 import {API_BASE_URL} from '/src/config.js';
 import TagCard from '/src/components/cards/TagCard.vue';
-
+document.title = "Tags"
 export default {
   name: 'TagsList',
   data() {

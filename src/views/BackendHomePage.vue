@@ -13,7 +13,7 @@
     <div class="row">
       <!-- Image Div Starts -->
       <div style=" margin-left: auto; margin-right: auto;" class="col-12 text-center">
-        <img src="/assets/back-end.png" style="max-width: 100%; height: auto;" class="img-fluid mx-auto d-block" alt="front-end technologies">
+        <img src="/assets/back-end.png" style="max-width: 80%; height: auto;" class="img-fluid mx-auto d-block" alt="front-end technologies">
       </div>
       <!-- Image Div Ends -->
     </div>
@@ -29,7 +29,7 @@
 <script>
 import {API_BASE_URL} from '/src/config.js';
 import ArticleList from '/src/components/lists/ArticleList.vue'
-
+document.title = "Backend"
 export default {
   name: "BackendHomePage",
   data() {
