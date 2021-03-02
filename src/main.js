@@ -17,6 +17,7 @@ import SignUp from "@/views/SignUp";
 import ChromeExtensionPage from "@/views/ChromeExtensionPage";
 import OpenSourcePage from "@/views/OpenSourcePage";
 import ExploreCoursesPage from "@/views/ExploreCoursesPage";
+import SignIn from "@/views/SignIn";
 import AndroidHomePage from "@/views/AndroidHomePage";
 
 const router = createRouter({
@@ -36,6 +37,7 @@ const router = createRouter({
         { path: '/opensource' , component: OpenSourcePage},
         { path: '/explore-courses', component: ExploreCoursesPage},
         { path: '/android', component: AndroidHomePage},
+        { path: '/signin', component: SignIn}
     ]
 });
 router.beforeEach((toRoute, fromRoute, next) => {
