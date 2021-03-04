@@ -71,7 +71,7 @@ export default {
       axios.post(url,formData)
       .then(function () {
         alert("You have successfully signed up.")
-        window.location.replace("/login");
+        window.location.replace("/signin");
       })
       .catch(error => {
         if (error.response) {
