@@ -4,14 +4,15 @@
   <div>
     <router-view :key="$route.fullPath"></router-view>
   </div>  
-  
+  <Footer></Footer>
 </template>
 
 <script>
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/footer";
 export default {
   name: 'App',
-  components: {Navbar}
+  components: {Footer, Navbar}
 }
 </script>
 
