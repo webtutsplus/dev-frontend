@@ -4,6 +4,9 @@ import {createRouter, createWebHistory} from 'vue-router';
 
 import App from './App.vue';
 
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
 import AllArticlesView from './views/AllArticlesView.vue';
 import TagsList from './views/TagsList.vue';
 import TagArticlesView from "@/views/TagArticlesView";
@@ -45,8 +48,6 @@ router.beforeEach((toRoute, fromRoute, next) => {
     next();
 })
 const app = createApp(App);
-
 app.use(router);
-
 app.mount('#app');
 

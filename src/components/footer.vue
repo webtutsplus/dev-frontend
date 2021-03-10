@@ -1,39 +1,51 @@
 <template>
   <footer class="container">
-      <div class="row">
-        <div class="col-6">
-          <ul class="footer-nav">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Android App</a></li>
-            <li><a href="#">iOS App</a></li>
-          </ul>
-        </div>
-        <div class="col-6">
-          <ul class="social-links">
-            <li><a href="#">
-              <ion-icon name="logo-facebook" v-pre></ion-icon>
-            </a></li>
-            <li><a href="#">
-              <ion-icon name="logo-twitter" v-pre></ion-icon>
-            </a></li>
-            <li><a href="#">
-              <ion-icon name="logo-instagram" v-pre></ion-icon>
-            </a></li>
-            <li><a href="#">
-              <ion-icon name="logo-google" v-pre></ion-icon>
-            </a></li>
-          </ul>
-        </div>
+    <div class="row">
+      <div class="col-6">
+        <ul class="footer-nav">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Android App</a></li>
+          <li><a href="#">iOS App</a></li>
+        </ul>
       </div>
-      <div>
-        <p>Webtutsplus Courses</p>
+      <div class="col-6">
+        <ul class="social-links">
+          <li><a href="https://www.facebook.com/SimpleCodingTutorials">
+            <ion-icon name="logo-facebook" v-pre></ion-icon>
+          </a></li>
+          <li><a href="https://twitter.com/_SimpleCoding_">
+            <ion-icon name="logo-twitter" v-pre></ion-icon>
+          </a></li>
+          <li><a href="https://www.instagram.com/_simplecoding_/">
+            <ion-icon name="logo-instagram" v-pre></ion-icon>
+          </a></li>
+          <li><a href="https://nilmadhab.medium.com">
+            <ion-icon name="logo-medium"></ion-icon>
+          </a></li>
+          <li><a href="https://dev.to/nilmadhabmondal">
+            <ion-icon src="https://api.iconify.design/mdi-dev-to.svg?height=100" height="24" width="24" />
+          </a></li>
+          <li><a href="#">
+            <ion-icon name="logo-google" v-pre></ion-icon>
+          </a></li>
+        </ul>
       </div>
+    </div>
+    <div>
+      <p>Webtutsplus Courses</p>
+    </div>
   </footer>
 </template>
 
 <script>
+import {
+  IonIcon
+} from '@ionic/vue';
 export default {
-  name: "Footer"
+  name: "Footer",
+  components:{
+    IonIcon,
+  }
 }
 </script>
 
