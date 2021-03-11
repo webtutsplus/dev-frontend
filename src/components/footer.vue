@@ -13,6 +13,9 @@
           <li><a href="https://www.facebook.com/SimpleCodingTutorials">
             <ion-icon name="logo-facebook" v-pre></ion-icon>
           </a></li>
+          <li><a href="https://www.linkedin.com/company/simplecoding">
+            <ion-icon name="logo-linkedin" v-pre></ion-icon>
+          </a></li>
           <li><a href="https://twitter.com/_SimpleCoding_">
             <ion-icon name="logo-twitter" v-pre></ion-icon>
           </a></li>
