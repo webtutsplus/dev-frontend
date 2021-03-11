@@ -30,7 +30,7 @@ export default {
     fetchArticleList: function () {
       this.per_page = 5;
       this.page = 0;
-      let url = this.apiUrl+'&per_page='+this.per_page+'&page='+this.page;
+      const url = this.apiUrl+'&per_page='+this.per_page+'&page='+this.page;
       axios.get(url)
           .then(data => this.articles = data.data.result)
           .catch(err => console.log(err));
@@ -42,7 +42,7 @@ export default {
 
         if (bottomOfWindow) {
           this.page+=1;
-          let url = this.apiUrl+'&per_page='+this.per_page+'&page='+this.page;
+          const url = this.apiUrl+'&per_page='+this.per_page+'&page='+this.page;
           axios.get(url)
               .then(response => {
                 response.data.result.forEach((item, index) => {
