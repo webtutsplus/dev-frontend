@@ -21,6 +21,7 @@ import ChromeExtensionPage from "@/views/ChromeExtensionPage";
 import OpenSourcePage from "@/views/OpenSourcePage";
 import ExploreCoursesPage from "@/views/ExploreCoursesPage";
 import SignIn from "@/views/SignIn";
+import BackendElastic from "@/views/BackendElastic";
 import AndroidHomePage from "@/views/AndroidHomePage";
 
 const router = createRouter({
@@ -39,6 +40,9 @@ const router = createRouter({
         { path: '/chrome-extension', component: ChromeExtensionPage},
         { path: '/opensource' , component: OpenSourcePage},
         { path: '/explore-courses', component: ExploreCoursesPage},
+        { path: '/signin', component: SignIn},
+        { path: '/elastic/backend', component:BackendElastic},
+        { path: '/articles/:writer/:slug', component: Article},
         { path: '/android', component: AndroidHomePage},
         { path: '/signin', component: SignIn}
     ]
