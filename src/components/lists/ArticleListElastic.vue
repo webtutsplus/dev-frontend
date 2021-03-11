@@ -15,7 +15,9 @@ export default {
   name: "ArticleListElastic",
   data() {
     return {
-      articles: null
+      articles: null,
+      per_page: null,
+      page: null
     }
   },
   components: {
@@ -26,13 +28,33 @@ export default {
   ],
   methods: {
     fetchArticleList: function () {
-      axios.get(this.apiUrl)
+      this.per_page = 5;
+      this.page = 0;
+      axios.get(this.apiUrl+'&per_page='+this.per_page+'&page='+this.page)
           .then(data => this.articles = data.data.result)
           .catch(err => console.log(err));
+    },
+    scroll: function () {
+      window.onscroll = () => {
+
+        let bottomOfWindow = (document.documentElement.scrollTop + window.innerHeight) - document.documentElement.offsetHeight > -0.7;
+        console.log(document.documentElement.scrollTop)
+        console.log(document.documentElement.offsetHeight)
+        console.log(window.innerHeight)
+        if (bottomOfWindow) {
+          this.page+=1;
+          axios.get(this.apiUrl+'&per_page='+this.per_page+'&page='+this.page)
+              .then(response => {
+                for (let i = 0; i < response.data.result.length; i++)
+                  this.articles.push(response.data.result[i]);
+              });
+        }
+      };
     }
   },
   mounted() {
     this.fetchArticleList();
+    this.scroll();
   }
 }
 </script>
