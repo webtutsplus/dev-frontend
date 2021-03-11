@@ -30,7 +30,8 @@ export default {
     fetchArticleList: function () {
       this.per_page = 5;
       this.page = 0;
-      axios.get(this.apiUrl+'&per_page='+this.per_page+'&page='+this.page)
+      let url = this.apiUrl+'&per_page='+this.per_page+'&page='+this.page;
+      axios.get(url)
           .then(data => this.articles = data.data.result)
           .catch(err => console.log(err));
     },
@@ -38,15 +39,15 @@ export default {
       window.onscroll = () => {
 
         let bottomOfWindow = (document.documentElement.scrollTop + window.innerHeight) - document.documentElement.offsetHeight > -1;
-        console.log(document.documentElement.scrollTop)
-        console.log(document.documentElement.offsetHeight)
-        console.log(window.innerHeight)
+
         if (bottomOfWindow) {
           this.page+=1;
-          axios.get(this.apiUrl+'&per_page='+this.per_page+'&page='+this.page)
+          let url = this.apiUrl+'&per_page='+this.per_page+'&page='+this.page;
+          axios.get(url)
               .then(response => {
-                for (let i = 0; i < response.data.result.length; i++)
-                  this.articles.push(response.data.result[i]);
+                response.data.result.forEach((item, index) => {
+                  this.articles.push(response.data.result[index]);
+                });
               });
         }
       };
