@@ -34,7 +34,7 @@ export default {
   name: "BackendHomePage",
   data() {
     return {
-      baseURL :  ELASTIC_API_BASE_URL+'?tag=backend&sort_by=hotness_score&sort_direction=desc&approved=&class_name=Article',
+      baseURL :  ELASTIC_API_BASE_URL+'?tag_names[]=backend&sort_by=hotness_score&sort_direction=desc&approved=&class_name=Article',
     }
   },
   components : {

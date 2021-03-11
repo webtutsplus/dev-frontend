@@ -37,7 +37,7 @@ export default {
     scroll: function () {
       window.onscroll = () => {
 
-        let bottomOfWindow = (document.documentElement.scrollTop + window.innerHeight) - document.documentElement.offsetHeight > -0.7;
+        let bottomOfWindow = (document.documentElement.scrollTop + window.innerHeight) - document.documentElement.offsetHeight > -1;
         console.log(document.documentElement.scrollTop)
         console.log(document.documentElement.offsetHeight)
         console.log(window.innerHeight)
