@@ -4,6 +4,9 @@ import {createRouter, createWebHistory} from 'vue-router';
 
 import App from './App.vue';
 
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
 import AllArticlesView from './views/AllArticlesView.vue';
 import TagsList from './views/TagsList.vue';
 import TagArticlesView from "@/views/TagArticlesView";
@@ -19,6 +22,7 @@ import OpenSourcePage from "@/views/OpenSourcePage";
 import ExploreCoursesPage from "@/views/ExploreCoursesPage";
 import SignIn from "@/views/SignIn";
 import BackendElastic from "@/views/BackendElastic";
+import AndroidHomePage from "@/views/AndroidHomePage";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -38,14 +42,16 @@ const router = createRouter({
         { path: '/explore-courses', component: ExploreCoursesPage},
         { path: '/signin', component: SignIn},
         { path: '/elastic/backend', component:BackendElastic},
-        { path: '/articles/:writer/:slug', component: Article}
+        { path: '/articles/:writer/:slug', component: Article},
+        { path: '/android', component: AndroidHomePage},
+        { path: '/signin', component: SignIn}
     ]
 });
-
-
+router.beforeEach((toRoute, fromRoute, next) => {
+    window.document.title = toRoute.name || 'Home';
+    next();
+})
 const app = createApp(App);
-
 app.use(router);
-
 app.mount('#app');
 
