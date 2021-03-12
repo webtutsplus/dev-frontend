@@ -21,8 +21,11 @@ import ChromeExtensionPage from "@/views/ChromeExtensionPage";
 import OpenSourcePage from "@/views/OpenSourcePage";
 import ExploreCoursesPage from "@/views/ExploreCoursesPage";
 import SignIn from "@/views/SignIn";
-import BackendElastic from "@/views/BackendElastic";
+import BackendElastic from "@/views/Elastic/BackendElastic";
 import AndroidHomePage from "@/views/AndroidHomePage";
+import FrontendElastic from "@/views/Elastic/FrontendElastic";
+import DevopsElastic from "@/views/Elastic/DevopsElastic";
+import AlgorithmsElastic from "@/views/Elastic/AlgorithmsElastic";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -42,6 +45,9 @@ const router = createRouter({
         { path: '/explore-courses', component: ExploreCoursesPage},
         { path: '/signin', component: SignIn},
         { path: '/elastic/backend', component:BackendElastic},
+        { path: '/elastic/frontend', component:FrontendElastic},
+        { path: '/elastic/devops', component:DevopsElastic},
+        { path: '/elastic/algorithms', component:AlgorithmsElastic},
         { path: '/articles/:writer/:slug', component: Article},
         { path: '/android', component: AndroidHomePage},
         { path: '/signin', component: SignIn}
