@@ -12,10 +12,6 @@ import TagsList from './views/TagsList.vue';
 import TagArticlesView from "@/views/TagArticlesView";
 import Article from "@/components/Article";
 import HomePageView from "@/views/HomePageView";
-import FrontEndHomePage from "@/views/FrontendHomePage";
-import BackendHomePage from "@/views/BackendHomePage";
-import DevopsHomePage from "@/views/DevopsHomePage";
-import AlgorithmsHomePage from "@/views/AlgorithmsHomePage";
 import SignUp from "@/views/SignUp";
 import ChromeExtensionPage from "@/views/ChromeExtensionPage";
 import OpenSourcePage from "@/views/OpenSourcePage";
@@ -35,19 +31,15 @@ const router = createRouter({
         { path: '/tags/:tag', component: TagArticlesView},
         { path: '/articles/:slug', component: Article},
         { path: '/', component: HomePageView},
-        { path: '/frontend', component: FrontEndHomePage},
-        { path: '/backend', component: BackendHomePage},
-        { path: '/devops', component: DevopsHomePage},
-        { path: '/algorithms', component: AlgorithmsHomePage},
         { path: '/signup', component: SignUp},
         { path: '/chrome-extension', component: ChromeExtensionPage},
         { path: '/opensource' , component: OpenSourcePage},
         { path: '/explore-courses', component: ExploreCoursesPage},
         { path: '/signin', component: SignIn},
-        { path: '/elastic/backend', component:BackendElastic},
-        { path: '/elastic/frontend', component:FrontendElastic},
-        { path: '/elastic/devops', component:DevopsElastic},
-        { path: '/elastic/algorithms', component:AlgorithmsElastic},
+        { path: '/backend', component:BackendElastic},
+        { path: '/frontend', component:FrontendElastic},
+        { path: '/devops', component:DevopsElastic},
+        { path: '/algorithms', component:AlgorithmsElastic},
         { path: '/articles/:writer/:slug', component: Article},
         { path: '/android', component: AndroidHomePage},
         { path: '/signin', component: SignIn}
