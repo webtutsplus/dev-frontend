@@ -205,6 +205,9 @@ export default {
   mounted() {
     const titleEl = document.querySelector('head title');
     titleEl.textContent = "Home";
+
+    const descEl = document.querySelector('head meta[name="description"]');
+    descEl.setAttribute('content', 'Our Homepage');
   }
 }
 </script>

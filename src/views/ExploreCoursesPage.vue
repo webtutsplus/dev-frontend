@@ -44,6 +44,9 @@ export default {
   mounted() {
     const titleEl = document.querySelector('head title');
     titleEl.textContent = "Explore Courses";
+
+    const descEl = document.querySelector('head meta[name="description"]');
+    descEl.setAttribute('content', 'Explore all our courses');
   }
 }
 </script>

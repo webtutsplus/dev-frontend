@@ -43,6 +43,9 @@ export default {
   mounted() {
       const titleEl = document.querySelector('head title');
       titleEl.textContent = "Learn Chrome Extensions";
+
+    const descEl = document.querySelector('head meta[name="description"]');
+    descEl.setAttribute('content', 'Learn about how to develop extensions from Chrome');
   }
 }
 </script>

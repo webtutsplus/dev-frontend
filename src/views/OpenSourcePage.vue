@@ -44,6 +44,9 @@ export default {
   mounted() {
     const titleEl = document.querySelector('head title');
     titleEl.textContent = "Learn Open Source";
+
+    const descEl = document.querySelector('head meta[name="description"]');
+    descEl.setAttribute('content', 'Learn about contributing to open source development');
   }
 }
 </script>

@@ -32,6 +32,9 @@ export default {
   mounted() {
     const titleEl = document.querySelector('head title');
     titleEl.textContent = "Learn Android";
+
+    const descEl = document.querySelector('head meta[name="description"]');
+    descEl.setAttribute('content', 'Learn about Android App Development');
   }
 }
 </script>

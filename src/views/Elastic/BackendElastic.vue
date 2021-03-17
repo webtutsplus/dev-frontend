@@ -43,6 +43,9 @@ export default {
   mounted() {
     const titleEl = document.querySelector('head title');
     titleEl.textContent = "Learn Backend";
+
+    const descEl = document.querySelector('head meta[name="description"]');
+    descEl.setAttribute('content', 'Learn about developing backends using various architectures');
   }
 }
 </script>

@@ -32,6 +32,9 @@ export default {
     this.fetchTaglist();
       const titleEl = document.querySelector('head title');
       titleEl.textContent = "All Tags";
+
+    const descEl = document.querySelector('head meta[name="description"]');
+    descEl.setAttribute('content', 'See all our tags');
   }
 }
 </script>

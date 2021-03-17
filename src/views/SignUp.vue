@@ -89,6 +89,9 @@ export default {
   mounted() {
     const titleEl = document.querySelector('head title');
     titleEl.textContent = "SignUp";
+
+    const descEl = document.querySelector('head meta[name="description"]');
+    descEl.setAttribute('content', 'Sign Up and Register yourself for access to exclusive stuff');
   }
 }
 </script>
