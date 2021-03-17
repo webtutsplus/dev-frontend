@@ -27,8 +27,15 @@
 </template>
 
 <script>
+import {ELASTIC_API_BASE_URL} from "@/config";
+
 export default {
   name: "AndroidHomePage",
+  data() {
+    return {
+      baseURL :  ELASTIC_API_BASE_URL+'?tag_names[]=android&sort_by=hotness_score&sort_direction=desc&approved=&class_name=Article',
+    }
+  },
   mounted() {
     const titleEl = document.querySelector('head title');
     titleEl.textContent = "Learn Android";

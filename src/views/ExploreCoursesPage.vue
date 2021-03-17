@@ -28,14 +28,14 @@
 </template>
 
 <script>
-import {API_BASE_URL} from "/src/config";
+import {ELASTIC_API_BASE_URL} from "/src/config";
 import ArticleList from "@/components/lists/ArticleList";
 
 export default {
   name: "ExploreCoursesPage",
   data() {
     return {
-      baseURL: API_BASE_URL + '/tags/frontend',
+      baseURL :  ELASTIC_API_BASE_URL+'?tag_names[]=course&sort_by=hotness_score&sort_direction=desc&approved=&class_name=Article',
     }
   },
   components : {
