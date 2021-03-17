@@ -39,6 +39,10 @@ export default {
   },
   components : {
     ArticleListElastic
+  },
+  mounted() {
+    const titleEl = document.querySelector('head title');
+    titleEl.textContent = "Learn Backend";
   }
 }
 </script>

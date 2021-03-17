@@ -85,6 +85,10 @@ export default {
         }
       });
     }
+  },
+  mounted() {
+    const titleEl = document.querySelector('head title');
+    titleEl.textContent = "SignUp";
   }
 }
 </script>

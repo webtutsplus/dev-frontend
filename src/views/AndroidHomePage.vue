@@ -27,9 +27,12 @@
 </template>
 
 <script>
-document.title = "Android"
 export default {
-name: "AndroidHomePage"
+  name: "AndroidHomePage",
+  mounted() {
+    const titleEl = document.querySelector('head title');
+    titleEl.textContent = "Learn Android";
+  }
 }
 </script>
 

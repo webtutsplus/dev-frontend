@@ -27,9 +27,11 @@ export default {
         .then(data => this.tags = data.data)
         .catch(err => console.log(err));
     }
-  }, 
+  },
   mounted() {
     this.fetchTaglist();
+      const titleEl = document.querySelector('head title');
+      titleEl.textContent = "All Tags";
   }
 }
 </script>

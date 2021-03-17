@@ -18,6 +18,10 @@ export default {
   components: {
       ArticleList
   },
+  mounted() {
+    const titleEl = document.querySelector('head title');
+    titleEl.textContent = "All Articles";
+  }
 }
 </script>
 

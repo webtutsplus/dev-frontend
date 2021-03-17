@@ -201,7 +201,11 @@
 // import image from './ass'
 export default {
   title: "Home",
-  name: "HomePageView"
+  name: "HomePageView",
+  mounted() {
+    const titleEl = document.querySelector('head title');
+    titleEl.textContent = "Home";
+  }
 }
 </script>
 

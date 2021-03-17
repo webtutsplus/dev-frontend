@@ -30,7 +30,6 @@
 <script>
 import {API_BASE_URL} from '/src/config.js';
 import ArticleList from "@/components/lists/ArticleList";
-document.title = "Chrome Extension"
 export default {
   name: "ChromeExtensionPage",
   data() {
@@ -40,6 +39,10 @@ export default {
   },
   components : {
     ArticleList
+  },
+  mounted() {
+      const titleEl = document.querySelector('head title');
+      titleEl.textContent = "Learn Chrome Extensions";
   }
 }
 </script>

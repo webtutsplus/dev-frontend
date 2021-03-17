@@ -30,7 +30,7 @@
 <script>
 import {API_BASE_URL} from "/src/config";
 import ArticleList from "@/components/lists/ArticleList";
-document.title = "Opensource"
+
 export default {
   name: "OpenSourcePage",
   data() {
@@ -40,6 +40,10 @@ export default {
   },
   components : {
     ArticleList
+  },
+  mounted() {
+    const titleEl = document.querySelector('head title');
+    titleEl.textContent = "Learn Open Source";
   }
 }
 </script>

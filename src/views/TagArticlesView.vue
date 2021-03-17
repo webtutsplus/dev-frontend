@@ -27,6 +27,10 @@ export default {
   },
   components: {
     ArticleList
+  },
+  mounted() {
+    const titleEl = document.querySelector('head title');
+    titleEl.textContent = this.$route.params.tag;
   }
 }
 </script>
