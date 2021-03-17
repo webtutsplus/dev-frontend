@@ -35,6 +35,9 @@ export default {
 
     const descEl = document.querySelector('head meta[name="description"]');
     descEl.setAttribute('content', 'See all our tags');
+
+    const robotEl = document.querySelector('head meta[name="robots"]');
+    robotEl.setAttribute('content', 'noindex, nofollow');
   }
 }
 </script>
