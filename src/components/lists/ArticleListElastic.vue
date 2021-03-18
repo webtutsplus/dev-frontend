@@ -4,11 +4,16 @@
                  v-bind:coverImage="article.main_image" v-bind:tags="article.tag_list" v-bind:slug="article.path"/>
   </div>
 
+  <div v-if="articles && articles.length == 0">
+    <EmptyView />
+  </div>
+
 </template>
 
 <script>
 import axios from 'axios';
 import ArticleCardElastic from "@/components/cards/ArticleCardElastic";
+import EmptyView from "@/views/EmptyView";
 
 
 export default {
@@ -21,6 +26,7 @@ export default {
     }
   },
   components: {
+    EmptyView,
     ArticleCardElastic
   },
   props: [

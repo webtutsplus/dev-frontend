@@ -4,6 +4,10 @@
                  v-bind:coverImage="article.main_image" v-bind:tags="article.tag_list" v-bind:slug="article.slug"/>
   </div>
 
+  <div v-if="articles.length == 0">
+    Coming Soon
+  </div>
+
 </template>
 
 <script>
