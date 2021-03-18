@@ -27,9 +27,22 @@
 </template>
 
 <script>
-document.title = "Android"
+import {ELASTIC_API_BASE_URL} from "@/config";
+
 export default {
-name: "AndroidHomePage"
+  name: "AndroidHomePage",
+  data() {
+    return {
+      baseURL :  ELASTIC_API_BASE_URL+'?tag_names[]=android&sort_by=hotness_score&sort_direction=desc&approved=&class_name=Article',
+    }
+  },
+  mounted() {
+    const titleEl = document.querySelector('head title');
+    titleEl.textContent = "Learn Android";
+
+    const descEl = document.querySelector('head meta[name="description"]');
+    descEl.setAttribute('content', 'Learn about Android App Development');
+  }
 }
 </script>
 

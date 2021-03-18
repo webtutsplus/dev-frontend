@@ -27,6 +27,13 @@ export default {
   },
   components: {
     ArticleList
+  },
+  mounted() {
+    const titleEl = document.querySelector('head title');
+    titleEl.textContent = this.$route.params.tag;
+
+    const descEl = document.querySelector('head meta[name="description"]');
+    descEl.setAttribute('content', `See all articles related to ${this.$route.params.tag}`);
   }
 }
 </script>

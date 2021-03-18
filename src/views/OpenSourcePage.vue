@@ -28,18 +28,25 @@
 </template>
 
 <script>
-import {API_BASE_URL} from "/src/config";
+import {ELASTIC_API_BASE_URL} from "/src/config";
 import ArticleList from "@/components/lists/ArticleList";
-document.title = "Opensource"
+
 export default {
   name: "OpenSourcePage",
   data() {
     return {
-      baseURL: API_BASE_URL + '/tags/frontend',
+      baseURL :  ELASTIC_API_BASE_URL+'?tag_names[]=opensource&sort_by=hotness_score&sort_direction=desc&approved=&class_name=Article',
     }
   },
   components : {
     ArticleList
+  },
+  mounted() {
+    const titleEl = document.querySelector('head title');
+    titleEl.textContent = "Learn Open Source";
+
+    const descEl = document.querySelector('head meta[name="description"]');
+    descEl.setAttribute('content', 'Learn about contributing to open source development');
   }
 }
 </script>

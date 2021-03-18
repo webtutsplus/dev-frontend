@@ -28,18 +28,24 @@
 </template>
 
 <script>
-import {API_BASE_URL} from '/src/config.js';
+import {ELASTIC_API_BASE_URL} from '/src/config.js';
 import ArticleList from "@/components/lists/ArticleList";
-document.title = "Chrome Extension"
 export default {
   name: "ChromeExtensionPage",
   data() {
     return {
-      baseURL: API_BASE_URL + '/tags/frontend',
+      baseURL :  ELASTIC_API_BASE_URL+'?tag_names[]=chromeextension&sort_by=hotness_score&sort_direction=desc&approved=&class_name=Article',
     }
   },
   components : {
     ArticleList
+  },
+  mounted() {
+      const titleEl = document.querySelector('head title');
+      titleEl.textContent = "Learn Chrome Extensions";
+
+    const descEl = document.querySelector('head meta[name="description"]');
+    descEl.setAttribute('content', 'Learn about how to develop extensions from Chrome');
   }
 }
 </script>

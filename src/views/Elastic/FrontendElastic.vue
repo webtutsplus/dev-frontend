@@ -40,6 +40,13 @@ export default {
   },
   components : {
     ArticleListElastic
+  },
+  mounted() {
+    const titleEl = document.querySelector('head title');
+    titleEl.textContent = "Learn Frontend";
+
+    const descEl = document.querySelector('head meta[name="description"]');
+    descEl.setAttribute('content', 'Learn about various FrontEnd frameworks');
   }
 }
 </script>
