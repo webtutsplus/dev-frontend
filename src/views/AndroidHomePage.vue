@@ -20,7 +20,7 @@
 
 
     <!--Article List-->
-    <ArticleList v-bind:api-url="baseURL"/>
+    <ArticleListElastic v-bind:api-url="baseURL"/>
 
   </div>
   <!--  Main Container Ends-->
@@ -28,9 +28,11 @@
 
 <script>
 import {ELASTIC_API_BASE_URL} from "@/config";
+import ArticleListElastic from "@/components/lists/ArticleListElastic";
 
 export default {
   name: "AndroidHomePage",
+  components: {ArticleListElastic},
   data() {
     return {
       baseURL :  ELASTIC_API_BASE_URL+'?tag_names[]=android&sort_by=hotness_score&sort_direction=desc&approved=&class_name=Article',
