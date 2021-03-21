@@ -24,6 +24,7 @@
         <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=11&l=ez&f=ifr&linkID=ef0f7d1b475266c857f1cbf3af5ca1d0&t=simplecoding-20&tracking_id=simplecoding-20" width="120" height="600" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
         <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=12&l=ur1&category=audibleplus&banner=0MG2XKQ7PYPP84NBNFR2&f=ifr&linkID=d8c2c54c7a42376126e41ba753a2fe66&t=simplecoding-20&tracking_id=simplecoding-20" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
         <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=49&l=ur1&category=amazonfashion&banner=0Y5RTMXKY62H4FKGBA02&f=ifr&linkID=44fdd0b9159fde23b056ccaa5ee8d7ff&t=simplecoding-20&tracking_id=simplecoding-20" width="300" height="600" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+        <div id="422472286"></div>
       </div>
     </div>
     <div id="disqus_thread"></div>
@@ -88,11 +89,23 @@ export default {
       })();
 
       console.log('Initialized Comments for ' + disqus_config.identifier)
+    },
+
+    initializeMediaNetAdd: function () {
+      try {
+        window._mNHandle.queue.push(function (){
+          window._mNDetails.loadTag("422472286", "160x600", "422472286");
+        });
+      }
+      catch (error) {
+        console.log("media.net", error);
+      }
     }
   },
   mounted() {
     this.fetchArticle();
     this.initializeDisqus();
+    this.initializeMediaNetAdd();
   },
 
 }
