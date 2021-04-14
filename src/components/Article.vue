@@ -39,6 +39,7 @@
 import axios from 'axios';
 import {API_BASE_URL} from '/src/config.js';
 import postscribe from 'postscribe';
+import {db} from '/src/firebase.js';
 
 export default {
 
@@ -53,23 +54,58 @@ export default {
   },
   methods: {
     fetchArticle: function () {
-      const url = `${this.baseURL}articles/slugs/${this.$route.params.slug}`
-      axios.get(url)
-          .then(response => {
-            this.content = response.data.processed_html;
-            this.title = response.data.title;
-            this.tags = response.data.tag_list;
-          }).then(() => {
-        let arr = document.getElementsByClassName('ltag_gist-liquid-tag')
-        document.title = this.title
-        for (let i = 0; i < arr.length; i++) {
-          postscribe(arr[i], arr[i].innerHTML, {
-            done: function () {
-              console.info('Dblclick script has been delivered.');
+      db.collection("articles")
+      .where('slug', '==', this.$route.params.slug)
+          .get()
+          .then((snap) => {
+            if (!snap.empty) {
+              snap.forEach((doc) => {
+                console.log(doc.data())
+                this.content = doc.data().processed_html;
+                this.title = doc.data().title;
+                this.tags = doc.data().tag_list;
+              })
             }
-          });
-        }
-      }).catch(err => console.log(err));
+            else {
+              console.log("No Data")
+              const url = `${this.baseURL}articles/slugs/${this.$route.params.slug}`
+              axios.get(url)
+                  .then(response => {
+                    let data = response.data;
+                    db.collection('articles')
+                        .add(data)
+                        .then((docRef) => {
+                          console.log(`Document written with ID: ${docRef.id}`);
+                          this.content = data.processed_html;
+                          this.title = data.title;
+                          this.tags = data.tag_list;
+                        })
+                        .catch((error) => {
+                          console.error(`Error adding document: ${error}`);
+                        });
+                  }).catch(err => {
+                    console.log(err.toString())
+              })
+            }
+          }).then(() => {
+            let arr = document.getElementsByClassName('ltag_gist-liquid-tag')
+            document.title = this.title
+            for (let i = 0; i < arr.length; i++) {
+              postscribe(arr[i], arr[i].innerHTML, {
+                done: function () {
+                  console.info('Dblclick script has been delivered.');
+                }
+              });
+            }
+          }).catch(err => console.log(err));
+
+      // const url = `${this.baseURL}articles/slugs/${this.$route.params.slug}`
+      // axios.get(url)
+      //     .then(response => {
+      //       this.content = response.data.processed_html;
+      //       this.title = response.data.title;
+      //       this.tags = response.data.tag_list;
+      //     })
     },
     initializeDisqus: function () {
       /**
