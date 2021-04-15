@@ -14,11 +14,13 @@ import ChromeExtensionPage from "@/views/ChromeExtensionPage";
 import OpenSourcePage from "@/views/OpenSourcePage";
 import ExploreCoursesPage from "@/views/ExploreCoursesPage";
 import SignIn from "@/views/SignIn";
-import BackendElastic from "@/views/Elastic/BackendElastic";
 import AndroidHomePage from "@/views/AndroidHomePage";
-import FrontendElastic from "@/views/Elastic/FrontendElastic";
-import DevopsElastic from "@/views/Elastic/DevopsElastic";
-import AlgorithmsElastic from "@/views/Elastic/AlgorithmsElastic";
+
+// import BackendElastic from "@/views/Elastic/BackendElastic";
+// import FrontendElastic from "@/views/Elastic/FrontendElastic";
+// import DevopsElastic from "@/views/Elastic/DevopsElastic";
+// import AlgorithmsElastic from "@/views/Elastic/AlgorithmsElastic";
+
 import BackendHomePage from "@/views/Database/BackendHomePage";
 import FrontendHomePage from "@/views/Database/FrontendHomePage";
 import DevopsHomePage from "@/views/Database/DevopsHomePage";
