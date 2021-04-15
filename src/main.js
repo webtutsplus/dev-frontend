@@ -19,6 +19,10 @@ import AndroidHomePage from "@/views/AndroidHomePage";
 import FrontendElastic from "@/views/Elastic/FrontendElastic";
 import DevopsElastic from "@/views/Elastic/DevopsElastic";
 import AlgorithmsElastic from "@/views/Elastic/AlgorithmsElastic";
+import BackendHomePage from "@/views/Database/BackendHomePage";
+import FrontendHomePage from "@/views/Database/FrontendHomePage";
+import DevopsHomePage from "@/views/Database/DevopsHomePage";
+import AlgorithmsHomePage from "@/views/Database/AlgorithmsHomePage";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -33,10 +37,10 @@ const router = createRouter({
         {path: '/opensource', component: OpenSourcePage},
         {path: '/explore-courses', component: ExploreCoursesPage},
         {path: '/signin', component: SignIn},
-        {path: '/backend', component: BackendElastic},
-        {path: '/frontend', component: FrontendElastic},
-        {path: '/devops', component: DevopsElastic},
-        {path: '/algorithms', component: AlgorithmsElastic},
+        {path: '/backend', component: BackendHomePage},
+        {path: '/frontend', component: FrontendHomePage},
+        {path: '/devops', component: DevopsHomePage},
+        {path: '/algorithms', component: AlgorithmsHomePage},
         {path: '/articles/:writer/:slug', component: Article},
         {path: '/android', component: AndroidHomePage},
         {path: '/signin', component: SignIn}

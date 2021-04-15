@@ -1,12 +1,13 @@
 <template>
   <div class="main-background container">
-    <ArticleList v-bind:api-url="baseURL"/>
+    <ArticleListbyTag v-bind:api-url="baseURL" v-bind:tag="$route.params.tag"/>
   </div>
 </template>
 
 <script>
 import {API_BASE_URL} from '/src/config.js';
-import ArticleList from '/src/components/lists/ArticleList.vue'
+// import ArticleList from '/src/components/lists/ArticleList.vue'
+import ArticleListbyTag from "@/components/lists/ArticleListbyTag";
 document.title = "Articles"
 export default {
   name: "TagArticlesView",
@@ -26,7 +27,7 @@ export default {
     }
   },
   components: {
-    ArticleList
+    ArticleListbyTag
   },
   mounted() {
     const titleEl = document.querySelector('head title');
