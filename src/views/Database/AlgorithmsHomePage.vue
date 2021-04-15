@@ -18,7 +18,7 @@
       <!-- Image Div Ends -->
     </div>
     <!--Article List-->
-    <ArticleList v-bind:api-url="baseURL"/>
+    <ArticleListbyTag v-bind:api-url="baseURL" v-bind:tag="'algorithms'"/>
 
   </div>
   <!--  Main Container Ends  -->
@@ -28,7 +28,8 @@
 
 <script>
 import {API_BASE_URL} from '/src/config.js';
-import ArticleList from '/src/components/lists/ArticleList.vue'
+// import ArticleList from '/src/components/lists/ArticleList.vue'
+import ArticleListbyTag from "@/components/lists/ArticleListbyTag";
 document.title = "Algorithms"
 export default {
   name: "AlgorithmsHomePage",
@@ -38,7 +39,7 @@ export default {
     }
   },
   components : {
-    ArticleList
+    ArticleListbyTag
   }
 }
 </script>

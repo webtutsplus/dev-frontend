@@ -18,8 +18,8 @@
       <!-- Image Div Ends -->
     </div>
     <!--Article List-->
-    <ArticleList v-bind:api-url="baseURL"/>
-
+<!--    <ArticleList v-bind:api-url="baseURL"/>-->
+    <ArticleListbyTag v-bind:api-url="baseURL" v-bind:tag="'devops'"/>
   </div>
   <!--  Main Container Ends  -->
 
@@ -27,7 +27,8 @@
 
 <script>
 import {API_BASE_URL} from '/src/config.js';
-import ArticleList from '/src/components/lists/ArticleList.vue'
+// import ArticleList from '/src/components/lists/ArticleList.vue'
+import ArticleListbyTag from "@/components/lists/ArticleListbyTag";
 document.title = "Devops"
 export default {
   name: "DevopsHomePage",
@@ -37,7 +38,7 @@ export default {
     }
   },
   components : {
-    ArticleList
+    ArticleListbyTag
   }
 }
 </script>
