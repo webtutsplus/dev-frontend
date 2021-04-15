@@ -21,25 +21,28 @@
 
 
     <!--Article List-->
-    <ArticleListElastic v-bind:api-url="baseURL"/>
+<!--    <ArticleListElastic v-bind:api-url="baseURL"/>-->
+    <ArticleListbyTag v-bind:api-url="baseURL" v-bind:tag="'course'"/>
 
   </div>
   <!--  Main Container Ends-->
 </template>
 
 <script>
-import {ELASTIC_API_BASE_URL} from "/src/config";
-import ArticleListElastic from "@/components/lists/ArticleListElastic";
+import {API_BASE_URL} from "/src/config";
+// import ArticleListElastic from "@/components/lists/ArticleListElastic";
+import ArticleListbyTag from "@/components/lists/ArticleListbyTag";
 
 export default {
   name: "ExploreCoursesPage",
   data() {
     return {
-      baseURL :  ELASTIC_API_BASE_URL+'?tag_names[]=course&sort_by=hotness_score&sort_direction=desc&approved=&class_name=Article',
+      // baseURL :  ELASTIC_API_BASE_URL+'?tag_names[]=course&sort_by=hotness_score&sort_direction=desc&approved=&class_name=Article',
+      baseURL :  API_BASE_URL+'/tags/course',
     }
   },
   components : {
-    ArticleListElastic
+    ArticleListbyTag
   },
   mounted() {
     const titleEl = document.querySelector('head title');
