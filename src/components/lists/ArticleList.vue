@@ -13,6 +13,7 @@
 <script>
 import axios from 'axios';
 import ArticleCard from '/src/components/cards/ArticleCard.vue';
+import {db} from "/src/firebase.js";
 
 
 
@@ -20,7 +21,7 @@ export default {
   name: "ArticleLists",
   data() {
     return {
-      articles: null
+      articles: []
     }
   },
   components: {
@@ -38,9 +39,33 @@ export default {
   // },
   methods: {
     fetchArticleList: function () {
-      axios.get(this.apiUrl)
-          .then(data => this.articles = data.data)
-          .catch(err => console.log(err));
+      console.log("fetching article")
+      db.collection("articles")
+          .get()
+          .then((snap) => {
+            if (!snap.empty) {
+              console.log("Article Found")
+              this.articles = snap.docs.map(doc => doc.data());
+            }
+            else {
+              console.log("No Data")
+              const url = `${this.apiUrl}`
+              axios.get(url)
+                  .then(response => {
+                    let data = response.data;
+                    data.forEach((article)=> {
+                      db.collection("articles")
+                          .doc(article.slug)
+                          .set(article)
+                    })
+                    this.articles = data;
+                  }).catch(err => {
+                console.log(err.toString())
+              })
+            }
+          }).catch(err => {
+            console.log(err.toString())
+          })
     }
   },
   mounted() {
