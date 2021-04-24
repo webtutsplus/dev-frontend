@@ -3,7 +3,7 @@
   <Navbar></Navbar>
   <div>
     <router-view :key="$route.fullPath"></router-view>
-  </div>  
+  </div>
   <Footer></Footer>
 </template>
 
@@ -11,11 +11,9 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/footer";
 export default {
-  name: 'App',
-  components: {Footer, Navbar}
-}
+  name: "App",
+  components: { Footer, Navbar },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>
