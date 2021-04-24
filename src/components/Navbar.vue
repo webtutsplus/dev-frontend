@@ -37,11 +37,11 @@
         </li>
 
         <li class="nav-item">
-          <router-link class="nav-link" to="'/articles'">Articles</router-link>
+          <router-link class="nav-link" to="/articles">Articles</router-link>
         </li>
 
         <li class="nav-item">
-          <router-link class="nav-link" to="'/tags'">Tags</router-link>
+          <router-link class="nav-link" to="/tags">Tags</router-link>
         </li>
 
         <li class="nav-item" v-if="!token">
