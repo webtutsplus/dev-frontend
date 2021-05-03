@@ -44,17 +44,17 @@
           <router-link class="nav-link" to="/tags">Tags</router-link>
         </li>
 
-        <li class="nav-item" v-if="!token">
-          <router-link class="nav-link" to="/signin">Sign In</router-link>
-        </li>
+<!--        <li class="nav-item" v-if="!token">-->
+<!--          <router-link class="nav-link" to="/signin">Sign In</router-link>-->
+<!--        </li>-->
 
-        <li class="nav-item" v-if="!token">
-          <router-link class="nav-link" to="/signup">Sign Up</router-link>
-        </li>
+<!--        <li class="nav-item" v-if="!token">-->
+<!--          <router-link class="nav-link" to="/signup">Sign Up</router-link>-->
+<!--        </li>-->
 
-        <li class="nav-item" v-else>
-          <a class="nav-link" href="#" @click="signOut">Sign Out</a>
-        </li>
+<!--        <li class="nav-item" v-else>-->
+<!--          <a class="nav-link" href="#" @click="signOut">Sign Out</a>-->
+<!--        </li>-->
       </ul>
     </div>
   </nav>
@@ -66,7 +66,7 @@ export default {
   name: "Navbar",
   data() {
     return {
-      token: null,
+      // token: null,
     };
   },
   methods: {
@@ -76,7 +76,7 @@ export default {
     },
   },
   mounted() {
-    this.token = localStorage.getItem("token");
+    // this.token = localStorage.getItem("token");
   },
 };
 </script>

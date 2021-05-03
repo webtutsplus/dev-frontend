@@ -9,11 +9,11 @@ import TagsList from './views/TagsList.vue';
 import TagArticlesView from "@/views/TagArticlesView";
 import Article from "@/components/Article";
 import HomePageView from "@/views/HomePageView";
-import SignUp from "@/views/SignUp";
+// import SignUp from "@/views/SignUp";
 import ChromeExtensionPage from "@/views/ChromeExtensionPage";
 import OpenSourcePage from "@/views/OpenSourcePage";
 import ExploreCoursesPage from "@/views/ExploreCoursesPage";
-import SignIn from "@/views/SignIn";
+// import SignIn from "@/views/SignIn";
 import AndroidHomePage from "@/views/AndroidHomePage";
 
 // import BackendElastic from "@/views/Elastic/BackendElastic";
@@ -34,18 +34,18 @@ const router = createRouter({
         {path: '/tags/:tag', component: TagArticlesView},
         {path: '/articles/:slug', component: Article},
         {path: '/', component: HomePageView},
-        {path: '/signup', component: SignUp},
+        // {path: '/signup', component: SignUp},
         {path: '/chrome-extension', component: ChromeExtensionPage},
         {path: '/opensource', component: OpenSourcePage},
         {path: '/explore-courses', component: ExploreCoursesPage},
-        {path: '/signin', component: SignIn},
+        // {path: '/signin', component: SignIn},
         {path: '/backend', component: BackendHomePage},
         {path: '/frontend', component: FrontendHomePage},
         {path: '/devops', component: DevopsHomePage},
         {path: '/algorithms', component: AlgorithmsHomePage},
         {path: '/articles/:writer/:slug', component: Article},
-        {path: '/android', component: AndroidHomePage},
-        {path: '/signin', component: SignIn}
+        {path: '/android', component: AndroidHomePage}
+        // {path: '/signin', component: SignIn}
     ]
 });
 router.beforeEach((toRoute, fromRoute, next) => {
