@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import axios from "axios";
+// import axios from "axios";
 import ArticleCard from "/src/components/cards/ArticleCard.vue";
 import { db } from "/src/firebase.js";
 
@@ -49,21 +49,21 @@ export default {
             this.articles = snap.docs.map((doc) => doc.data());
           } else {
             console.log("No Data");
-            const url = `${this.apiUrl}`;
-            axios
-              .get(url)
-              .then((response) => {
-                let data = response.data;
-                data.forEach((article) => {
-                  db.collection("articles")
-                    .doc(article.slug)
-                    .set(article);
-                });
-                this.articles = data;
-              })
-              .catch((err) => {
-                console.log(err.toString());
-              });
+            // const url = `${this.apiUrl}`;
+            // axios
+            //   .get(url)
+            //   .then((response) => {
+            //     let data = response.data;
+            //     data.forEach((article) => {
+            //       db.collection("articles")
+            //         .doc(article.slug)
+            //         .set(article);
+            //     });
+            //     this.articles = data;
+            //   })
+            //   .catch((err) => {
+            //     console.log(err.toString());
+            //   });
           }
         })
         .catch((err) => {

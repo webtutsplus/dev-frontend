@@ -36,7 +36,7 @@
 
 <script>
 
-import axios from 'axios';
+// import axios from 'axios';
 import {API_BASE_URL} from '/src/config.js';
 import postscribe from 'postscribe';
 import {db} from '/src/firebase.js';
@@ -68,24 +68,25 @@ export default {
             }
             else {
               console.log("No Data")
-              const url = `${this.baseURL}articles/slugs/${this.$route.params.slug}`
-              axios.get(url)
-                  .then(response => {
-                    let data = response.data;
-                    db.collection('articles')
-                        .add(data)
-                        .then((docRef) => {
-                          console.log(`Document written with ID: ${docRef.id}`);
-                          this.content = data.processed_html;
-                          this.title = data.title;
-                          this.tags = data.tag_list;
-                        })
-                        .catch((error) => {
-                          console.error(`Error adding document: ${error}`);
-                        });
-                  }).catch(err => {
-                    console.log(err.toString())
-              })
+              // Get from backend and store in firebase.
+              // const url = `${this.baseURL}articles/slugs/${this.$route.params.slug}`
+              // axios.get(url)
+              //     .then(response => {
+              //       let data = response.data;
+              //       db.collection('articles')
+              //           .add(data)
+              //           .then((docRef) => {
+              //             console.log(`Document written with ID: ${docRef.id}`);
+              //             this.content = data.processed_html;
+              //             this.title = data.title;
+              //             this.tags = data.tag_list;
+              //           })
+              //           .catch((error) => {
+              //             console.error(`Error adding document: ${error}`);
+              //           });
+              //     }).catch(err => {
+              //       console.log(err.toString())
+              // })
             }
           }).then(() => {
             let arr = document.getElementsByClassName('ltag_gist-liquid-tag')

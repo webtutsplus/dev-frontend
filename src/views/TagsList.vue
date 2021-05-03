@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+// import axios from 'axios';
 import {API_BASE_URL} from '/src/config.js';
 import TagCard from '/src/components/cards/TagCard.vue';
 import {db} from "@/firebase";
@@ -39,21 +39,21 @@ export default {
             }
             else {
               console.log("No Data. Fetching From DB")
-              const url = `${this.baseURL}tags/`;
-              axios.get(url)
-                  .then(response => {
-                    let data = response.data;
-                    data.forEach((tag)=> {
-                      db.collection("tags")
-                          .doc(tag.name)
-                          .set({
-                            id: tag.id
-                          })
-                    })
-                    this.tags = data;
-                  }).catch(err => {
-                console.log(err.toString())
-              })
+              // const url = `${this.baseURL}tags/`;
+              // axios.get(url)
+              //     .then(response => {
+              //       let data = response.data;
+              //       data.forEach((tag)=> {
+              //         db.collection("tags")
+              //             .doc(tag.name)
+              //             .set({
+              //               id: tag.id
+              //             })
+              //       })
+              //       this.tags = data;
+              //     }).catch(err => {
+              //   console.log(err.toString())
+              // })
             }
           }).catch(err => {
         console.log(err.toString())
